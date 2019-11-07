@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: server-config-client
+
+  cloud:
+    nacos:
+      config:
+        # 配置中心的地址
+        server-addr: 112.74.42.138:8848
+        # 配置文件后缀名
+        file-extension: yml
