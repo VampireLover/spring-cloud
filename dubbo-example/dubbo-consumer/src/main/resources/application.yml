@@ -1,0 +1,26 @@
+
+spring:
+  application:
+    name: dubbo-comsumer-xiaojun
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.3.137.59:8848
+  main:
+    #  配置中约定的尽量一个bean使用一个name，随着引入的第三方库越来越多，就有可能就会出现名字相同的bean
+    # 允许同名bean覆盖
+    allow-bean-definition-overriding: true
+
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+
+  # 注册中心 可以使用nacos zookeeper
+  # Dubbo 服务注册中心配置，其中子属性address
+  registry:
+    address:  nacos://10.3.137.59:8848
+  cloud:
+    subscribed-services: dubbo-provider-xiaojun
+server:
+  port: 9011

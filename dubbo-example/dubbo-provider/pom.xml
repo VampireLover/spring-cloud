@@ -6,7 +6,7 @@
         <groupId>com.xiaojun</groupId>
         <artifactId>dubbo-example</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
+        <relativePath>../pom.xml</relativePath><!-- lookup parent from repository -->
     </parent>
     <groupId>com.xiaojun</groupId>
     <artifactId>dubbo-provider</artifactId>
@@ -20,11 +20,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>com.xiaojun</groupId>
             <artifactId>dubbo-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
@@ -37,6 +32,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>

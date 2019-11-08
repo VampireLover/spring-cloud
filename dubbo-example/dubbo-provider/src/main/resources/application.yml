@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: dubbo-provider-xiaojun
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.3.137.59:8848
+
+dubbo:
+  scan:
+    base-packages: com.xiaojun.dubboprovider.service.impl
+  protocol:
+    name: dubbo
+    port: -1
+  # 注册中心 可以使用nacos zookeeper
+  # Dubbo 服务注册中心配置，其中子属性address
+  registry:
+    address:  nacos://10.3.137.59:8848
+
+server:
+  port: 9010
